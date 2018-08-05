@@ -1,0 +1,26 @@
+//Question 1 of the assignment
+int LED_PIN = 13;
+int POT_PIN = 2;
+int val;
+
+void setup() {
+  // put your setup code here, to run once:
+  
+  pinMode(LED_PIN, OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  
+  val = analogRead(POT_PIN);
+  voltage = (val/1024)*5;
+
+  if(val>2.5)
+    digitalWrite(LED_PIN, HIGH);
+  else
+    digitalWrite(LED_PIN, LOW);
+
+  delay(1000);
+
+}
